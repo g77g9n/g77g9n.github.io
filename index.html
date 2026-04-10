@@ -3,63 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G77G9N | IT & Cybersecurity Solutions</title>
+    <title>G77G9N | Tech Solutions</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .hero-section { background: #0f172a; color: white; padding: 100px 0; }
-        .service-card { border: none; transition: 0.3s; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .navbar { background-color: #0f172a !important; }
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 120px 0; }
+        .card { border: none; border-radius: 15px; transition: 0.4s; background: white; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .section-title { font-weight: 700; margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: #3b82f6; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        .badge-tech { background: #e2e8f0; color: #475569; margin-right: 5px; font-size: 0.8rem; padding: 5px 10px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">G77G9N TECH</a>
+            <a class="navbar-brand fw-bold" href="#">G77G9N <span class="text-primary">TECH</span></a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="#services">Services</a>
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-                <a class="nav-link btn btn-primary text-white ms-lg-3" href="mailto:your-email@example.com">Contact Me</a>
+                <a class="nav-link" href="#portfolio">Projects</a>
+                <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="#">Get a Quote</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
+    <header class="hero text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Innovative IT Solutions</h1>
-            <p class="lead">Cybersecurity | Web Development | Business Technology</p>
-            <p>Third-year Cybersecurity Student at APU & Incoming Business Tech Intern</p>
+            <span class="badge bg-primary mb-3">Available for Freelance Projects</span>
+            <h1 class="display-3 fw-bold mb-3">Building Secure, Modern <br><span class="text-primary">Digital Experiences.</span></h1>
+            <p class="lead opacity-75 mb-4">Cybersecurity Researcher & Full-Stack Developer</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#portfolio" class="btn btn-outline-light btn-lg px-5">View My Work</a>
+            </div>
         </div>
     </header>
 
     <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-bold">What I Can Do For You</h2>
+        <div class="container py-5">
+            <h2 class="text-center section-title">Expertise</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 service-card p-4 text-center">
-                        <h3>Web Development</h3>
-                        <p>Specializing in UI/UX redesigns and custom website building using modern frameworks.</p>
+                    <div class="card h-100 p-4 shadow-sm text-center">
+                        <div class="mb-3 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16"><path d="M0 13.5A1.5 1.5 0 0 0 1.5 15h13a1.5 1.5 0 0 0 1.5-1.5V9h-1V13.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V9h-1v4.5zM12.96 7H3.04L5 3h6l1.96 4z"/></svg></div>
+                        <h4 class="fw-bold">Web Development</h4>
+                        <p class="text-muted">High-performance websites designed with a focus on UI/UX and responsiveness.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 service-card p-4 text-center">
-                        <h3>Cyber Security</h3>
-                        <p>Network security audits, threat modeling, and securing small business infrastructures.</p>
+                    <div class="card h-100 p-4 shadow-sm text-center">
+                        <div class="mb-3 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 0 0-6 0v2H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1z"/></svg></div>
+                        <h4 class="fw-bold">Cybersecurity</h4>
+                        <p class="text-muted">Security audits and threat detection to keep your business data safe and private.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 service-card p-4 text-center">
-                        <h3>IT Support</h3>
-                        <p>Linux troubleshooting, Cisco networking configuration, and general tech consultancy.</p>
+                    <div class="card h-100 p-4 shadow-sm text-center">
+                        <div class="mb-3 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/></svg></div>
+                        <h4 class="fw-bold">Business Tech</h4>
+                        <p class="text-muted">Optimizing workflows and tech infrastructure for maximum efficiency.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2026 G77G9N. All Rights Reserved.</p>
+    <section id="portfolio" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="text-center section-title">Recent Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card overflow-hidden shadow-sm">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Booking360 Redesign</h4>
+                            <p class="text-muted">A full UI/UX overhaul focusing on stakeholder mapping and user experience optimization.</p>
+                            <div><span class="badge-tech">UI/UX</span><span class="badge-tech">Figma</span><span class="badge-tech">HTA</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card overflow-hidden shadow-sm">
+                        <div class="p-4">
+                            <h4 class="fw-bold">AI Phishing Detection</h4>
+                            <p class="text-muted">Research project developing an AI-based system to detect and flag malicious emails.</p>
+                            <div><span class="badge-tech">Python</span><span class="badge-tech">Cybersecurity</span><span class="badge-tech">AI</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center text-muted border-top">
+        <div class="container">
+            <p class="mb-0">Designed & Developed by G77G9N &copy; 2026</p>
+        </div>
     </footer>
 
 </body>
