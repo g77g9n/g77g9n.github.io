@@ -3,124 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G77G9N | Cybersecurity & Dev</title>
+    <title>G77G9N | IT Solutions & Support</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-glow: #3b82f6;
-            --accent-glow: #06b6d4;
-            --bg-dark: #020617;
-        }
-        body { 
-            font-family: 'Space Grotesk', sans-serif; 
-            background-color: var(--bg-dark); 
-            color: #e2e8f0;
-            overflow-x: hidden;
-        }
-        /* Cool Animated Background */
+        :root { --primary: #3b82f6; --dark: #020617; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--dark); color: #e2e8f0; }
+        
+        /* Hero with Professional Tech Image */
         .hero { 
-            position: relative;
-            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920'); 
-            background-size: cover;
-            background-position: center;
-            padding: 150px 0;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1920'); 
+            background-size: cover; background-position: center; padding: 120px 0;
         }
-        /* Frosted Glass Card Effect */
+
         .glass-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            transition: 0.4s;
+            background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;
+            overflow: hidden; transition: 0.3s;
         }
-        .glass-card:hover {
-            border-color: var(--primary-glow);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-            transform: translateY(-5px);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-glass {
-            background: rgba(2, 6, 23, 0.8);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .btn-cyber {
-            background: linear-gradient(45deg, #3b82f6, #06b6d4);
-            border: none;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .glass-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        
+        .service-img { width: 100%; height: 200px; object-fit: cover; }
+        .btn-cyber { background: linear-gradient(45deg, #3b82f6, #06b6d4); border: none; color: white; padding: 12px 30px; border-radius: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: rgba(2,6,23,0.95); backdrop-filter: blur(10px);">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">G77G9N <span class="text-primary">_CORE</span></a>
+            <a class="navbar-brand fw-bold" href="#">G77G9N <span class="text-primary">SUPPORT</span></a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link px-3" href="#services">Network</a>
-                <a class="nav-link px-3" href="#portfolio">Projects</a>
-                <a class="btn btn-cyber ms-lg-3" href="#">Initialize Contact</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="btn btn-cyber ms-lg-3" href="#">Get Support Now</a>
             </div>
         </div>
     </nav>
 
     <header class="hero text-center">
         <div class="container">
-            <h1 class="display-2 fw-bold mb-3">SECURE THE <span class="text-gradient">FUTURE.</span></h1>
-            <p class="lead mb-4 mx-auto" style="max-width: 600px; color: #94a3b8;">
-                Specializing in advanced cybersecurity infrastructure, 
-                UI/UX systems, and full-stack development.
-            </p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#portfolio" class="btn btn-outline-primary btn-lg px-5" style="border-radius: 10px;">View Database</a>
-            </div>
+            <h1 class="display-3 fw-bold mb-3">Expert IT <span class="text-primary">Troubleshooting.</span></h1>
+            <p class="lead mb-4">From Cybersecurity Audits to Hardware Optimization.</p>
         </div>
     </header>
 
     <section id="services" class="py-5">
         <div class="container py-5">
-            <h2 class="text-center mb-5 fw-bold">SOLUTIONS_LIST</h2>
-            <div class="row g-4 text-center">
+            <h2 class="text-center mb-5 fw-bold">Specialized Services</h2>
+            <div class="row g-4">
+                
                 <div class="col-md-4">
-                    <div class="glass-card h-100 p-5">
-                        <div class="mb-4 text-primary fs-1">🛡️</div>
-                        <h4 class="fw-bold">Security Audits</h4>
-                        <p style="color: #94a3b8;">Threat intelligence and network defense simulations using Cisco systems.</p>
+                    <div class="glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800" class="service-img" alt="Troubleshooting">
+                        <div class="p-4">
+                            <h4 class="fw-bold">PC Troubleshooting</h4>
+                            <p class="text-muted">Fixing lag, diagnosing hardware issues, and optimizing battery performance for laptops.</p>
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="glass-card h-100 p-5">
-                        <div class="mb-4 text-primary fs-1">💻</div>
-                        <h4 class="fw-bold">Web Systems</h4>
-                        <p style="color: #94a3b8;">Building clean, efficient applications like Booking360 with a focus on UI/UX.</p>
+                    <div class="glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&q=80&w=800" class="service-img" alt="OS Formatting">
+                        <div class="p-4">
+                            <h4 class="fw-bold">OS Formatting</h4>
+                            <p class="text-muted">Clean OS installation and data backup to make your machine feel brand new again.</p>
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="glass-card h-100 p-5">
-                        <div class="mb-4 text-primary fs-1">⚡</div>
-                        <h4 class="fw-bold">Tech Intern</h4>
-                        <p style="color: #94a3b8;">Deploying business technology solutions at scale within enterprise environments.</p>
+                    <div class="glass-card h-100">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" class="service-img" alt="Web Dev">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Web & Security</h4>
+                            <p class="text-muted">Professional web development and security hardening for your digital assets.</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <footer class="py-5 text-center text-muted border-top border-secondary">
         <div class="container">
-            <p class="mb-0">SYS_ID: G77G9N // YEAR_3_CYBER // 2026</p>
+            <p>G77G9N TECH SOLUTIONS // Professional IT Support</p>
         </div>
     </footer>
 
