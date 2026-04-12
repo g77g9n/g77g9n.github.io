@@ -106,40 +106,45 @@
             border-top: 2px solid var(--primary);
         }
 
-        /* Adds a sharp "border" effect and glow to the main heading */
         .display-1 {
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 2px 2px 4px rgba(0,0,0,0.9);
             letter-spacing: -1px;
         }
 
-        /* Makes the sub-headline readable against the 3D lines */
         .hero .lead {
             text-shadow: 1px 1px 3px rgba(0,0,0,1);
-            background: rgba(2, 6, 23, 0.4); /* Subtle dark backing */
+            background: rgba(2, 6, 23, 0.4); 
             display: inline-block;
             padding: 5px 15px;
             border-radius: 5px;
         }
 
-        /* Enhances the button border and adds a constant glow */
         .btn-outline-light {
             border: 2px solid #ffffff !important;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700 !important;
-            background: rgba(2, 6, 23, 0.3); /* Darker inside so text stands out */
+            background: rgba(2, 6, 23, 0.3); 
         }
 
-/* Highly Transparent Frosted Glass Box */
         .hero-glass-box {
-            background: rgba(2, 6, 23, 0.2);  /* Changed from 0.75 to 0.2 for high transparency */
-            backdrop-filter: blur(4px);       /* Lowered the blur so the 3D lines look sharper */
+            background: rgba(2, 6, 23, 0.2);  
+            backdrop-filter: blur(4px);       
             padding: 50px 40px;
             border-radius: 20px;
-            border: 1px solid rgba(59, 130, 246, 0.4); /* Slightly brighter border to keep the box shape visible */
+            border: 1px solid rgba(59, 130, 246, 0.4); 
             display: inline-block;
             box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        /* Blinking Cursor Animation */
+        .cursor {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
     </style>
@@ -160,17 +165,16 @@
         </div>
     </nav>
 
-<header id="hero-3d" class="hero text-center">
+    <header id="hero-3d" class="hero text-center">
         <div class="container" style="position: relative; z-index: 2;">
             <div class="hero-glass-box" data-aos="zoom-in">
-                <h1 class="display-1 fw-bold mb-4">Modern <span class="text-primary">IT Support.</span></h1>
+                <h1 class="display-1 fw-bold mb-4">Modern <span id="typewriter" class="text-primary"></span><span class="text-primary cursor">|</span></h1>
                 
                 <p class="lead mb-5 opacity-75 fs-4">Fast Laptop Repair • Web Design • Cyber Security</p>
                 
                 <div>
                     <a href="#about" class="btn btn-outline-light btn-lg px-5">START SYSTEM</a>
                 </div>
-                
             </div>
         </div>
     </header>
@@ -187,7 +191,6 @@
                     <a href="trust.html" class="btn btn-outline-info btn-lg px-4 py-2" style="border-radius: 8px;">
                         Why Trust Us &rarr;
                     </a>
-
                 </div>
                 <div class="col-md-6 text-center mt-5 mt-md-0" data-aos="fade-left">
                     <img src="https://cdn-icons-png.flaticon.com/512/2092/2092570.png" class="rolling-tech img-fluid" style="max-width: 350px;">
@@ -300,6 +303,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    
     <script>
         VANTA.NET({
             el: "#hero-3d",
@@ -317,5 +321,39 @@
             spacing: 18.00
         })
     </script>
+
+    <script>
+        const textSpan = document.getElementById("typewriter");
+        const words = ["IT Support.", "Web Design.", "Cyber Security."];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            const speed = isDeleting ? 50 : 100;
+
+            if (isDeleting) {
+                textSpan.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textSpan.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000); 
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length; 
+                setTimeout(typeEffect, 500); 
+            } else {
+                setTimeout(typeEffect, speed); 
+            }
+        }
+        setTimeout(typeEffect, 1000);
+    </script>
+
 </body>
 </html>
