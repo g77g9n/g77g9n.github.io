@@ -34,15 +34,15 @@
 
         .glass-card:hover { 
             border-color: var(--accent); 
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(6, 182, 212, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3);
         }
         
         .btn-cyber { 
             background: linear-gradient(45deg, var(--primary), var(--accent)); 
             border: none; 
             color: white !important; 
-            padding: 12px 30px; 
+            padding: 14px 40px; 
             border-radius: 12px; 
             font-weight: bold;
             transition: 0.4s; 
@@ -50,26 +50,24 @@
             display: inline-block;
         }
 
-        .btn-cyber:hover { transform: scale(1.05); filter: brightness(1.2); }
+        .btn-cyber:hover { transform: scale(1.05); filter: brightness(1.2); box-shadow: 0 0 20px rgba(6, 182, 212, 0.6); }
 
         .project-icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
-        /* Adds a sharp "border" effect and glow to the main heading */
         .display-3 {
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 2px 2px 4px rgba(0,0,0,0.9);
             letter-spacing: -1px;
         }
 
-/* Highly Transparent Frosted Glass Box */
         .hero-glass-box {
-            background: rgba(2, 6, 23, 0.2);  /* Changed from 0.75 to 0.2 for high transparency */
-            backdrop-filter: blur(4px);       /* Lowered the blur so the 3D lines look sharper */
+            background: rgba(2, 6, 23, 0.2); 
+            backdrop-filter: blur(4px);      
             padding: 50px 40px;
             border-radius: 20px;
-            border: 1px solid rgba(59, 130, 246, 0.4); /* Slightly brighter border to keep the box shape visible */
+            border: 1px solid rgba(59, 130, 246, 0.4);
             display: inline-block;
             box-shadow: 0 15px 35px rgba(0,0,0,0.6);
         }
@@ -88,16 +86,10 @@
 
     <header id="hero-globe" class="text-center" style="border-bottom: 1px solid rgba(59, 130, 246, 0.3); position: relative; padding: 140px 0;">
         <div class="container" style="position: relative; z-index: 2;">
-            
             <div class="hero-glass-box" data-aos="zoom-in">
                 <h1 class="display-3 fw-bold mb-3 text-white">Why Trust <span class="text-primary">Our Team.</span></h1>
-                
-                <p class="lead mb-5 opacity-90 fs-4">Real Experience. Secure Systems. Proven Results.</p>
-                
-                <div data-aos="zoom-in" data-aos-delay="600">
-                     <a href="index.html#contact" class="btn btn-cyber px-5 py-3">Book a Service Today</a>
+                <p class="lead mb-0 opacity-90 fs-4">Real Experience. Secure Systems. Proven Results.</p>
                 </div>
-            </div>
         </div>
     </header>
 
@@ -179,6 +171,14 @@
         </div>
     </section>
 
+    <section class="py-5 text-center" style="position: relative;">
+        <div class="container py-5" data-aos="zoom-in-up">
+            <h2 class="display-5 fw-bold mb-4">Ready to upgrade your tech?</h2>
+            <p class="lead opacity-75 mb-5">Let's fix your problems with enterprise-grade solutions.</p>
+            <a href="index.html#contact" class="btn btn-cyber fs-5">BOOK A SERVICE TODAY</a>
+        </div>
+    </section>
+
     <footer class="py-4 text-center" style="background-color: #080c1a; border-top: 2px solid #3b82f6;">
         <h5 class="fw-bold text-white mb-1">G77G9N TECH</h5>
         <p class="opacity-50 small mb-0">&copy; 2026. All Rights Reserved.</p>
@@ -200,10 +200,10 @@
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x3b82f6,      // Primary Blue
-            color2: 0x06b6d4,     // Accent Cyan
-            size: 1.10,           // Globe size
-            backgroundColor: 0x020617 // Matches your dark background
+            color: 0x3b82f6,      
+            color2: 0x06b6d4,     
+            size: 1.10,           
+            backgroundColor: 0x020617 
         })
     </script>
 </body>
