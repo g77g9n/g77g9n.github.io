@@ -105,6 +105,34 @@
             background-color: #080c1a; color: #94a3b8; padding: 60px 0 30px 0;
             border-top: 2px solid var(--primary);
         }
+
+        /* Adds a sharp "border" effect and glow to the main heading */
+        .display-1 {
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 2px 2px 4px rgba(0,0,0,0.9);
+            letter-spacing: -1px;
+        }
+
+        /* Makes the sub-headline readable against the 3D lines */
+        .hero .lead {
+            text-shadow: 1px 1px 3px rgba(0,0,0,1);
+            background: rgba(2, 6, 23, 0.4); /* Subtle dark backing */
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        /* Enhances the button border and adds a constant glow */
+        .btn-outline-light {
+            border: 2px solid #ffffff !important;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700 !important;
+            background: rgba(2, 6, 23, 0.3); /* Darker inside so text stands out */
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -137,7 +165,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-6" data-aos="fade-right">
-                    <h5 class="text-primary fw-bold">// WHO WE ARE</h5>
+                    <h5 class="text-primary fw-bold"> WHO WE ARE</h5>
                     <h2 class="display-4 fw-bold mb-4">Quality Tech Solutions.</h2>
                     <p class="lead">Reliable support for your digital life.</p>
                     <p class="opacity-75 mb-5">We specialize in solving complex hardware and software problems. Whether your laptop is failing or you need a secure digital presence, we deliver professional results every time.</p>
@@ -158,34 +186,51 @@
         <div class="container py-5">
             <h2 class="text-center mb-5 fw-bold" data-aos="fade-down">OUR SERVICES</h2>
             <div class="row g-4">
+                
                 <div class="col-md-3" data-aos="flip-up" data-aos-delay="100">
-                    <div class="glass-card h-100 p-4 text-center">
+                    <div class="glass-card h-100 p-3 text-center">
+                        <div class="overflow-hidden rounded mb-3" style="height: 160px;">
+                            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=500" class="img-fluid h-100 w-100" style="object-fit: cover; filter: brightness(0.7) sepia(0.2) hue-rotate(190deg);">
+                        </div>
                         <h4 class="text-primary fw-bold">PC REPAIR</h4>
-                        <p class="small">We fix hardware issues, laptop battery problems, and overheating issues.</p>
-                        <a href="hardware.html" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        <p class="small opacity-75">We fix hardware issues, laptop battery problems, and overheating issues through professional maintenance.</p>
+                        <a href="hardware.html" class="btn btn-outline-primary btn-sm mt-2 w-100">Read More</a>
                     </div>
                 </div>
+
                 <div class="col-md-3" data-aos="flip-up" data-aos-delay="200">
-                    <div class="glass-card h-100 p-4 text-center">
+                    <div class="glass-card h-100 p-3 text-center">
+                        <div class="overflow-hidden rounded mb-3" style="height: 160px;">
+                            <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&q=80&w=500" class="img-fluid h-100 w-100" style="object-fit: cover; filter: brightness(0.7) sepia(0.2) hue-rotate(190deg);">
+                        </div>
                         <h4 class="text-primary fw-bold">FORMATTING</h4>
-                        <p class="small">Clean OS installation and full driver updates to make your PC fast again.</p>
-                        <a href="formatting.html" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        <p class="small opacity-75">Clean OS installation and full driver updates to restore your machine to peak factory speeds.</p>
+                        <a href="formatting.html" class="btn btn-outline-primary btn-sm mt-2 w-100">Read More</a>
                     </div>
                 </div>
+
                 <div class="col-md-3" data-aos="flip-up" data-aos-delay="300">
-                    <div class="glass-card h-100 p-4 text-center">
+                    <div class="glass-card h-100 p-3 text-center">
+                        <div class="overflow-hidden rounded mb-3" style="height: 160px;">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=500" class="img-fluid h-100 w-100" style="object-fit: cover; filter: brightness(0.7) sepia(0.2) hue-rotate(190deg);">
+                        </div>
                         <h4 class="text-primary fw-bold">WEB DESIGN</h4>
-                        <p class="small">Building beautiful, fast, and mobile-friendly websites for any purpose.</p>
-                        <a href="webdev.html" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        <p class="small opacity-75">Building beautiful, fast, and mobile-friendly websites that look professional and load instantly.</p>
+                        <a href="webdev.html" class="btn btn-outline-primary btn-sm mt-2 w-100">Read More</a>
                     </div>
                 </div>
+
                 <div class="col-md-3" data-aos="flip-up" data-aos-delay="400">
-                    <div class="glass-card h-100 p-4 text-center">
+                    <div class="glass-card h-100 p-3 text-center">
+                        <div class="overflow-hidden rounded mb-3" style="height: 160px;">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=500" class="img-fluid h-100 w-100" style="object-fit: cover; filter: brightness(0.7) sepia(0.2) hue-rotate(190deg);">
+                        </div>
                         <h4 class="text-primary fw-bold">SECURITY</h4>
-                        <p class="small">Hardening your systems and protecting your personal data from threats.</p>
-                        <a href="cybersec.html" class="btn btn-outline-primary btn-sm mt-3">Read More</a>
+                        <p class="small opacity-75">Hardening your systems and protecting your personal data from online threats and hackers.</p>
+                        <a href="cybersec.html" class="btn btn-outline-primary btn-sm mt-2 w-100">Read More</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -204,7 +249,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <label class="form-label">Email Address</label>
-                            <input type="email" name="_replyto" class="form-control" placeholder="example@email.com" required>
+                            <input type="email" name="_replyto" class="form-control" placeholder="example@gmail.com" required>
                         </div>
                         <div class="col-md-6 mb-4">
                             <label class="form-label">WhatsApp Number</label>
@@ -222,7 +267,7 @@
                     </div>
                     <div class="mb-4">
                         <label class="form-label">Brief Description of Problem</label>
-                        <textarea name="message" class="form-control" rows="4" placeholder="Tell me what happened to your device..."></textarea>
+                        <textarea name="message" class="form-control" rows="4" placeholder="Tell me your problem"></textarea>
                     </div>
                     <button type="submit" class="btn btn-cyber w-100 py-3">SEND REQUEST</button>
                 </form>
