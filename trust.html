@@ -34,8 +34,8 @@
 
         .glass-card:hover { 
             border-color: var(--accent); 
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(6, 182, 212, 0.3);
         }
         
         .btn-cyber { 
@@ -57,32 +57,22 @@
             margin-bottom: 15px;
         }
 
-        /* Text Glow to stand out against the 3D Globe */
+        /* Adds a sharp "border" effect and glow to the main heading */
         .display-3 {
             text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 2px 2px 4px rgba(0,0,0,0.9);
             letter-spacing: -1px;
         }
 
-        .hero-subtext {
-            text-shadow: 1px 1px 3px rgba(0,0,0,1);
-            background: rgba(2, 6, 23, 0.5); 
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 8px;
-        }
-
-        /* Frosted Glass Box for Hero Text */
+/* Highly Transparent Frosted Glass Box */
         .hero-glass-box {
-            background: rgba(2, 6, 23, 0.75); /* Dark background to hide bright lines */
-            backdrop-filter: blur(10px);      /* Blurs the 3D lines behind the box */
+            background: rgba(2, 6, 23, 0.2);  /* Changed from 0.75 to 0.2 for high transparency */
+            backdrop-filter: blur(4px);       /* Lowered the blur so the 3D lines look sharper */
             padding: 50px 40px;
             border-radius: 20px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.4); /* Slightly brighter border to keep the box shape visible */
             display: inline-block;
             box-shadow: 0 15px 35px rgba(0,0,0,0.6);
         }
-
-
     </style>
 </head>
 <body>
@@ -96,11 +86,17 @@
         </div>
     </nav>
 
-<header id="hero-globe" class="text-center" style="border-bottom: 1px solid rgba(59, 130, 246, 0.3); position: relative; padding: 140px 0;">
+    <header id="hero-globe" class="text-center" style="border-bottom: 1px solid rgba(59, 130, 246, 0.3); position: relative; padding: 140px 0;">
         <div class="container" style="position: relative; z-index: 2;">
+            
             <div class="hero-glass-box" data-aos="zoom-in">
                 <h1 class="display-3 fw-bold mb-3 text-white">Why Trust <span class="text-primary">Our Team.</span></h1>
-                <p class="lead opacity-90 hero-subtext" style="background: none;">Real Experience. Secure Systems. Proven Results.</p>
+                
+                <p class="lead mb-5 opacity-90 fs-4">Real Experience. Secure Systems. Proven Results.</p>
+                
+                <div data-aos="zoom-in" data-aos-delay="600">
+                     <a href="index.html#contact" class="btn btn-cyber px-5 py-3">Book a Service Today</a>
+                </div>
             </div>
         </div>
     </header>
@@ -180,13 +176,6 @@
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <section class="py-5 text-center">
-        <div class="container py-5" data-aos="zoom-in-up">
-            <h3 class="fw-bold mb-4">Ready to fix your tech problems?</h3>
-            <a href="index.html#contact" class="btn btn-cyber px-5 py-3">Book a Service Today</a>
         </div>
     </section>
 
