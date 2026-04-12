@@ -70,6 +70,19 @@
             padding: 5px 20px;
             border-radius: 8px;
         }
+
+        /* Frosted Glass Box for Hero Text */
+        .hero-glass-box {
+            background: rgba(2, 6, 23, 0.75); /* Dark background to hide bright lines */
+            backdrop-filter: blur(10px);      /* Blurs the 3D lines behind the box */
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            display: inline-block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+
     </style>
 </head>
 <body>
@@ -83,10 +96,12 @@
         </div>
     </nav>
 
-    <header id="hero-globe" class="text-center" style="border-bottom: 1px solid rgba(59, 130, 246, 0.3); position: relative; padding: 140px 0;">
+<header id="hero-globe" class="text-center" style="border-bottom: 1px solid rgba(59, 130, 246, 0.3); position: relative; padding: 140px 0;">
         <div class="container" style="position: relative; z-index: 2;">
-            <h1 class="display-3 fw-bold mb-3 text-white" data-aos="fade-down">Why Trust <span class="text-primary">Our Team.</span></h1>
-            <p class="lead opacity-90 hero-subtext" data-aos="fade-up" data-aos-delay="200">Real Experience. Secure Systems. Proven Results.</p>
+            <div class="hero-glass-box" data-aos="zoom-in">
+                <h1 class="display-3 fw-bold mb-3 text-white">Why Trust <span class="text-primary">Our Team.</span></h1>
+                <p class="lead opacity-90 hero-subtext" style="background: none;">Real Experience. Secure Systems. Proven Results.</p>
+            </div>
         </div>
     </header>
 

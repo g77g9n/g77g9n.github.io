@@ -131,7 +131,16 @@
             background: rgba(2, 6, 23, 0.3); /* Darker inside so text stands out */
         }
 
-
+/* Frosted Glass Box for Hero Text */
+        .hero-glass-box {
+            background: rgba(2, 6, 23, 0.75); /* Dark background to hide bright lines */
+            backdrop-filter: blur(10px);      /* Blurs the 3D lines behind the box */
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            display: inline-block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
 
     </style>
 </head>
@@ -151,11 +160,11 @@
         </div>
     </nav>
 
-    <header id="hero-3d" class="hero text-center">
+   <header id="hero-3d" class="hero text-center">
         <div class="container" style="position: relative; z-index: 2;">
-            <h1 class="display-1 fw-bold mb-4" data-aos="zoom-in-down">Modern <span class="text-primary">IT Support.</span></h1>
-            <p class="lead mb-5 opacity-75 fs-4" data-aos="fade-up" data-aos-delay="300">Fast Laptop Repair • Web Design • Cyber Security</p>
-            <div data-aos="zoom-in" data-aos-delay="600">
+            <div class="hero-glass-box" data-aos="zoom-in">
+                <h1 class="display-1 fw-bold mb-4">Modern <span class="text-primary">IT Support.</span></h1>
+                <p class="lead mb-5 opacity-75 fs-4">Fast Laptop Repair • Web Design • Cyber Security</p>
                 <a href="#about" class="btn btn-outline-light btn-lg px-5">START SYSTEM</a>
             </div>
         </div>
